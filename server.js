@@ -16,6 +16,7 @@ app.get('/search',function(req,res){
 	});	
 });
 
-app.listen(3000,function(err){
+var port = process.env.port || 1337;
+app.listen(port,function(err){
 	console.log('Listining on : 3000');
 });
