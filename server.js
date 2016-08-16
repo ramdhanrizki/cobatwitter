@@ -10,7 +10,7 @@ var client = new Twitter({
 });
 app.get('/search',function(req,res){
 	client.get('search/tweets',{q:'HIV/AIDS'},function(error,tweets,response){
-		var data = JSON.parse(tweets); 
+		//var data = JSON.parse(tweets); 
 		//console.log(data.);
 		res.json(tweets);
 	});	
@@ -18,5 +18,5 @@ app.get('/search',function(req,res){
 
 var port = process.env.port || 1337;
 app.listen(port,function(err){
-	console.log('Listining on : 3000');
+	console.log('Listining on '+port);
 });
