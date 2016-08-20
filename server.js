@@ -9,7 +9,7 @@ var client = new Twitter({
 	access_token_secret:'KD5frjkG43GuSCvRVmDBycAxEXG5Bfr88KeH5GHDtEsSd'
 });
 app.get('/search',function(req,res){
-	client.get('search/tweets',{q:'HIV/AIDS'},function(error,tweets,response){
+	client.get('search/tweets',{q:'HIV/AIDS',lang:'id'},function(error,tweets,response){
 		//var data = JSON.parse(tweets); 
 		//console.log(data.);
 		res.json(tweets);
